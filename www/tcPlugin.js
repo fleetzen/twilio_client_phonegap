@@ -1,4 +1,3 @@
-(function() {
     var delegate = {}
     var TwilioPlugin = {
         Device: function() {
@@ -144,6 +143,6 @@
         if (!window.Twilio.Device) window.Twilio.Device = new TwilioPlugin.Device();
         if (!window.Twilio.Connection) window.Twilio.Connection = new TwilioPlugin.Connection();
     }
- TwilioPlugin.install();
 
-})()
+    TwilioPlugin.install();
+    module.exports = window.Twilio
