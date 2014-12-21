@@ -145,6 +145,7 @@
         if (!window.Twilio.Connection) window.Twilio.Connection = new TwilioPlugin.Connection();
     }
  TwilioPlugin.install();
-    module.exports = new TwilioPlugin.Device();
-    module.exports = new TwilioPlugin.Connection();
-})()
+ module.exports = window.Twilio;
+    //module.exports = new TwilioPlugin.Device();
+    //module.exports = new TwilioPlugin.Connection();
+})();
