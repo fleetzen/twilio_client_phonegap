@@ -69,6 +69,20 @@ public class TCPlugin extends CordovaPlugin implements DeviceListener,
 			Log.d(TAG, "incoming intent received with connection: "+ mConnection.getState().name());
 			String constate = mConnection.getState().name();
 			if(constate.equals("PENDING")) {
+                JSONObject object = new JSONObject();
+                 try {
+                 Map<String, String> connParams = mConnection.getParameters();
+                 object.put("CallSid", connParams.get("CallSid"));
+                 object.put("AccountSid", connParams.get("AccountSid"));
+                 object.put("From", connParams.get("From"));
+                 object.put("To", connParams.get("To"));
+                 object.put("ApiVersion", connParams.get("ApiVersion"));
+                 } catch (JSONException e) {
+                 mInitCallbackContext.sendPluginResult(new PluginResult(PluginResult.Status.JSON_EXCEPTION));
+                 return;
+                 }
+
+                 TCPlugin.this.javascriptCallback("onincoming", object, mInitCallbackContext);}
 				TCPlugin.this.javascriptCallback("onincoming", mInitCallbackContext);				
 			}
 		}
