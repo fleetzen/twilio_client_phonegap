@@ -70,6 +70,7 @@ public class TCPlugin extends CordovaPlugin implements DeviceListener,
 			String constate = mConnection.getState().name();
 			if(constate.equals("PENDING")) {
 	 /** 
+	  * Commentting out Jeff's changes - Suren'
 	  	JSONObject object = new JSONObject();
        		try {
                 Map<String, String> connParams = mConnection.getParameters();
