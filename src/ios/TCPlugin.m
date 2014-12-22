@@ -42,7 +42,10 @@
 
 -(void)device:(TCDevice *)device didReceiveIncomingConnection:(TCConnection *)connection {
     self.connection = connection;    
-    [self javascriptCallback:@"onincoming" withArguments:connection.parameters];
+    [self javascriptCallback:@"onincoming"]; 
+    
+    //removed the stuff that we took on top of Jeff's
+    //withArguments:connection.parameters];
 }
 
 -(void)device:(TCDevice *)device didReceivePresenceUpdate:(TCPresenceEvent *)presenceEvent {
@@ -215,8 +218,9 @@
     }
 
     _ringNotification = [[UILocalNotification alloc] init];
-    _ringNotification.fireDate = nil; 	
-    _ringNotification.timeZone = [NSTimeZone defaultTimeZone];
+    // commenting out changes on top of Jeff's
+    // _ringNotification.fireDate = nil; 	
+    //_ringNotification.timeZone = [NSTimeZone defaultTimeZone];
     _ringNotification.alertBody = alertBody;
     _ringNotification.alertAction = @"Answer";
     _ringNotification.soundName = ringSound;
