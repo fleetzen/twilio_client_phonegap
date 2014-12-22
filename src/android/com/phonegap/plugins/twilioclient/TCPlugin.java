@@ -69,9 +69,10 @@ public class TCPlugin extends CordovaPlugin implements DeviceListener,
 			Log.d(TAG, "incoming intent received with connection: "+ mConnection.getState().name());
 			String constate = mConnection.getState().name();
 			if(constate.equals("PENDING")) {
-                JSONObject object = new JSONObject();
-                 try {
-                 Map<String, String> connParams = mConnection.getParameters();
+	 /** 
+	  	JSONObject object = new JSONObject();
+       		try {
+                Map<String, String> connParams = mConnection.getParameters();
                  object.put("CallSid", connParams.get("CallSid"));
                  object.put("AccountSid", connParams.get("AccountSid"));
                  object.put("From", connParams.get("From"));
@@ -83,6 +84,7 @@ public class TCPlugin extends CordovaPlugin implements DeviceListener,
                  }
 
                  TCPlugin.this.javascriptCallback("onincoming", object, mInitCallbackContext);
+	*/
 				TCPlugin.this.javascriptCallback("onincoming", mInitCallbackContext);				
 			}
 		}
