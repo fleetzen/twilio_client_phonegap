@@ -83,10 +83,10 @@ public class TCPlugin extends CordovaPlugin implements DeviceListener,
                  mInitCallbackContext.sendPluginResult(new PluginResult(PluginResult.Status.JSON_EXCEPTION));
                  return;
                  }
-
+*/
                  TCPlugin.this.javascriptCallback("onincoming", object, mInitCallbackContext);
-	*/
-				TCPlugin.this.javascriptCallback("onincoming", mInitCallbackContext);				
+	
+			//	TCPlugin.this.javascriptCallback("onincoming", mInitCallbackContext);				
 			}
 		}
 	};
