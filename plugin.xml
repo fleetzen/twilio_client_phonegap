@@ -31,7 +31,7 @@
               <param name="android-package" value="com.phonegap.plugins.twilioclient.TCPlugin"/>
             </feature>
         </config-file>
-<source-file src="libs/android-support-v13.jar" target-dir="libs"/> 
+<!-- <source-file src="libs/android-support-v13.jar" target-dir="libs"/> -->
 	  <source-file src="libs/armeabi/libtwilio-native.so" target-dir="libs/armeabi" />
 <source-file src="libs/armeabi-v7a/libtwilio-native.so" target-dir="libs/armeabi-v7a" />
 <source-file src="libs/mips/libtwilio-native.so" target-dir="libs/mips" />
