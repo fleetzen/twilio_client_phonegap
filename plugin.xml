@@ -37,7 +37,8 @@
 <source-file src="libs/armeabi-v7a/libtwilio-native.so" target-dir="libs/armeabi-v7a" />
 <source-file src="libs/mips/libtwilio-native.so" target-dir="libs/mips" />
 <source-file src="libs/x86/libtwilio-native.so" target-dir="libs/x86" />
-<source-file src="libs/twilioclient-android-1.1.3-ad48713.jar" target-dir="libs" />
+<!--<source-file src="libs/twilioclient-android-1.1.3-ad48713.jar" target-dir="libs"/> -->
+<source-file src="libs/twilioclient-android.jar" target-dir="libs" />
 <source-file src="src/android/com/phonegap/plugins/twilioclient/IncomingConnectionActivity.java" target-dir="src/com/phonegap/plugins/twilioclient" />
          <source-file src="src/android/com/phonegap/plugins/twilioclient/TCPlugin.java"
                 target-dir="src/com/phonegap/plugins/twilioclient" />
